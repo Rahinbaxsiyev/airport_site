@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Поддержка - AeroBaku Airport</title>
+  <link rel="icon" href="assets/logo.svg?v=2" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo" aria-label="AeroBaku Airport">
+        <img src="assets/logo.svg?v=2" alt="AeroBaku Airport" />
+      </a>
+      <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="flights.html">Рейсы</a></li>
+        <li><a href="services.html">Сервисы</a></li>
+        <li><a class="active" href="contact.html">Поддержка</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container page support-layout">
+    <section>
+      <p class="eyebrow">Центр поддержки</p>
+      <h1>Поможем с билетом, багажом и рейсом</h1>
+      <p>Заполните форму, чтобы связаться со справочной службой по вопросам рейса, багажа или услуг.</p>
+
+      <form id="contactForm" class="contact-form">
+        <label>Имя
+          <input name="name" type="text" placeholder="Ваше имя" required minlength="2" />
+        </label>
+        <label>Email
+          <input name="email" type="email" placeholder="example@mail.com" required />
+        </label>
+        <label>Тема
+          <select name="topic" required>
+            <option value="Ticket">Билет</option>
+            <option value="Baggage">Багаж</option>
+            <option value="Refund">Возврат</option>
+            <option value="Services">Услуги</option>
+          </select>
+        </label>
+        <label>Сообщение
+          <textarea name="message" rows="5" placeholder="Опишите вопрос" required minlength="10"></textarea>
+        </label>
+        <button class="btn primary" type="submit">Отправить обращение</button>
+        <p id="formStatus" class="form-status"></p>
+      </form>
+    </section>
+
+    <aside class="support-card">
+      <h2>Быстрая помощь</h2>
+      <p><strong>Телефон:</strong><br>+994 12 555 00 00</p>
+      <p><strong>Email:</strong><br>support@aerobaku.az</p>
+      <p><strong>Адрес:</strong><br>Баку, международный аэропорт</p>
+      <div class="faq-box">
+        <strong>Частые вопросы</strong>
+        <span>Возврат билета</span>
+        <span>Нормы багажа</span>
+        <span>Регистрация на рейс</span>
+      </div>
+      <section class="saved-requests">
+        <h2>Мои обращения</h2>
+        <div id="requestList"></div>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>AeroBaku Airport</strong>
+        <p>Поддержка пассажиров и обратная связь.</p>
+      </div>
+      <div>
+        <span>Справочная:</span>
+        <strong>+994 12 555 00 00</strong>
+      </div>
+      <div>
+        <span>Email:</span>
+        <strong>support@aerobaku.az</strong>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

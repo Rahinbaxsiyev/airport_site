@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сервисы - AeroBaku Airport</title>
+  <link rel="icon" href="assets/logo.svg?v=2" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo" aria-label="AeroBaku Airport">
+        <img src="assets/logo.svg?v=2" alt="AeroBaku Airport" />
+      </a>
+      <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="flights.html">Рейсы</a></li>
+        <li><a class="active" href="services.html">Сервисы</a></li>
+        <li><a href="contact.html">Поддержка</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <div class="section-heading compact">
+      <p class="eyebrow">Дополнительные услуги</p>
+      <h1>Все для поездки в одном месте</h1>
+      <p>Витрина тревел-сервиса: багаж, страховка, парковка, VIP-зал и помощь пассажиру.</p>
+    </div>
+
+    <div class="service-grid" id="serviceGrid"></div>
+
+    <section class="service-detail-card" id="serviceDetail"></section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>AeroBaku Airport</strong>
+        <p>Сервисы аэропорта и дополнительные услуги для пассажиров.</p>
+      </div>
+      <div>
+        <span>Справочная:</span>
+        <strong>+994 12 555 00 00</strong>
+      </div>
+      <div>
+        <span>Email:</span>
+        <strong>support@aerobaku.az</strong>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

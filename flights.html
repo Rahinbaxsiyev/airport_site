@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Рейсы - AeroBaku Airport</title>
+  <link rel="icon" href="assets/logo.svg?v=2" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo" aria-label="AeroBaku Airport">
+        <img src="assets/logo.svg?v=2" alt="AeroBaku Airport" />
+      </a>
+      <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a class="active" href="flights.html">Рейсы</a></li>
+        <li><a href="services.html">Сервисы</a></li>
+        <li><a href="contact.html">Поддержка</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <div class="section-heading compact">
+      <p class="eyebrow">Онлайн-табло</p>
+      <h1>Вылеты и прилеты</h1>
+      <p>Статус рейса, время, терминал и выход на посадку в одном разделе.</p>
+    </div>
+
+    <section class="results-layout">
+      <aside class="filters-card">
+        <h2>Фильтры</h2>
+        <label>Поиск
+          <input id="flightSearch" type="search" placeholder="город, рейс, авиакомпания" />
+        </label>
+        <label>Тип
+          <select id="typeFilter">
+            <option value="all">Все</option>
+            <option value="departure">Вылет</option>
+            <option value="arrival">Прилет</option>
+          </select>
+        </label>
+        <label>Статус
+          <select id="statusFilter">
+            <option value="all">Любой</option>
+            <option value="on-time">По расписанию</option>
+            <option value="check-in">Регистрация</option>
+            <option value="boarding">Посадка</option>
+            <option value="delayed">Задержан</option>
+            <option value="arrived">Прибыл</option>
+          </select>
+        </label>
+        <button id="resetFlights" class="btn ghost" type="button">Сбросить</button>
+      </aside>
+
+      <section>
+        <div class="result-topbar">
+          <strong id="flightCount">Найдено рейсов: 0</strong>
+          <select id="sortFlights" aria-label="Сортировка">
+            <option value="time">По времени</option>
+            <option value="city">По городу</option>
+            <option value="status">По статусу</option>
+          </select>
+        </div>
+        <div id="flightList" class="ticket-list"></div>
+
+        <section class="saved-panel">
+          <div class="section-heading compact">
+            <p class="eyebrow">Мой список</p>
+            <h2>Отслеживаемые рейсы</h2>
+          </div>
+          <div id="watchList" class="favorite-list"></div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>AeroBaku Airport</strong>
+        <p>Онлайн-табло и статусы рейсов.</p>
+      </div>
+      <div>
+        <span>Справочная:</span>
+        <strong>+994 12 555 00 00</strong>
+      </div>
+      <div>
+        <span>Email:</span>
+        <strong>support@aerobaku.az</strong>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
